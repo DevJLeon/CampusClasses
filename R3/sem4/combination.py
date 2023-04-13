@@ -1,20 +1,28 @@
 print("\n Bienvenido a la calculadora de combinaciones.")
+def factorial (entero):
+    if entero != 0:
+        f = 1
+        for i in range(1, entero+1):
+            f *=i
+        return f
+    else: return(1)
 
-n = int(input("Ingrese la el total de objetos a combinar"))
-r = int(input("Ingrese la el tamaño del grupo muestra"))
-numerador = 1
-rF = 1
-nMrF = 1
-nMr= n-r
-for i in range(1, n+1):
-    numerador *= i
 
-for j in range(1, r+1):
-    rF *= j
+n = int(input("Ingrese la el total de objetos a combinar: "))
+r = int(input("Ingrese la el tamaño del grupo muestra: "))
+nF = factorial(n)
+rF = factorial(r)
+nMrF = factorial(n-r)
 
-for k in range(1,nMr+1):
-    nMrF *= k
+#for i in range(1, n+1):
+#    nF *= i
+#
+#for j in range(1, r+1):
+#    rF *= j
+#
+#for k in range(1,nMr+1):
+#    nMrF *= k
 
-combinacion = numerador/(rF*(nMrF))
+combinacion = nF/(rF*(nMrF))
 
 print("La combinacion es:", int(combinacion))
