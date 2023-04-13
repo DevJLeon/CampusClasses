@@ -25,33 +25,30 @@ def menu():
     elif opcion == 3:
         menuAvanzado()
 
-
-
 def menuBasico():
     print("----------------------------------------------")
     opcion = float(input("0. TERMINAR PROCESO\n----------------------------------------------\n1. CREAR GRUPO BÁSICO CON CAMPERS Y SUS DATOS PERSONALES\n1.1. REGISTRAR EXPERT TRAINER DEL GRUPO BÁSICO\n1.2. BÚSQUEDA DE CAMPERS DUPLICADOS\n1.3. ELIMINACION DE CAMPERS POR INASISTENCIA\n1.4. LISTAR CAMPERS\n1.5. TRANSLADO DE CAMPER ENTRE GRUPOS POR NIVELACION\n1.6. AGREGAR CAMPERS AL GRUPO (despues del registro inicial)\n1.7. REPORTAR CAMPERS DE MAYOR Y MENOR EDAD\n"))
-    while opcion != 0:
-        if opcion == 1.0:
-            createGroup(1)
+    if opcion == 1.0:
+        createGroup(1)
+        menuBasico()
+    elif opcion == 1.1:
+        try:
+            addTrainer(CAMPUS[0])
             menuBasico()
-        elif opcion == 1.1:
-            try:
-                addTrainer(CAMPUS[0])
-                menuBasico()
-            except:
-                print("No existe la categoría aún. Por favor créela.")
-        elif opcion == 1.2:
-            None
-        elif opcion == 1.3:
-            None
-        elif opcion == 1.4:
-            None
-        elif opcion == 1.5:
-            None
-        elif opcion == 1.6:
-            None
-        elif opcion == 1.7:
-            None
+        except:
+            print("No existe la categoría aún. Por favor créela.")
+    elif opcion == 1.2:
+        None
+    elif opcion == 1.3:
+        None
+    elif opcion == 1.4:
+        None
+    elif opcion == 1.5:
+        None
+    elif opcion == 1.6:
+        None
+    elif opcion == 1.7:
+        None
 
 def menuIntermedio():
     print("----------------------------------------------")
