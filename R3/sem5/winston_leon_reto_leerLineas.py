@@ -1,15 +1,15 @@
 import io
 
-archivo1= open("archivo01.txt","w+")
-primeraLinea = input("Ingrese lo que contendrá la primera línea: \t")
-seguir = int(input("¿Desea continuar? \n1.SI 0.NO \n"))
-siguienteLinea =primeraLinea+"\n"
-while seguir != 0:
-    adicion = input("Ingrese la siguiente linea: \n")
-    siguienteLinea += adicion + "\n"
-    seguir = int(input("¿Desea continuar? \n1.SI 0.NO \n"))
-archivo1.write(siguienteLinea)
-archivo1.close()
+#archivo1= open("archivo01.txt","w+")
+#primeraLinea = input("Ingrese lo que contendrá la primera línea: \t")
+#seguir = int(input("¿Desea continuar? \n1.SI 0.NO \n"))
+#siguienteLinea =primeraLinea+"\n"
+#while seguir != 0:
+#    adicion = input("Ingrese la siguiente linea: \n")
+#    siguienteLinea += adicion + "\n"
+#    seguir = int(input("¿Desea continuar? \n1.SI 0.NO \n"))
+#archivo1.write(siguienteLinea)
+#archivo1.close()
 
 
 archivo1= open("archivo01.txt","r")
