@@ -46,11 +46,12 @@ def create(file = "R3/sem5/empresa.json"):
         personas.append(datos)
         with open(file, "w") as data:
             json.dump(access_data,data, indent=4)
-    for persona in personas:
-        print (persona)
-
-def read():
-    None
+def read(file = "R3/sem5/empresa.json"):
+    with open(file, "r+") as data:
+        access_data = json.load(data)
+        personas = access_data["EMPRESA"]["PERSONAS"]
+        for persona in personas:
+            print(persona[["id"],["nombre"],["edad"],["numDoc"]])
 
 def update():
     None
