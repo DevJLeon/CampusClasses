@@ -21,7 +21,12 @@ dict = {
         ]
     }
 }
-
+try:
+    with open("R3/sem5/empresa.json", "r") as archivo:
+        None
+except:
+    with open("R3/sem5/empresa.json", "w") as archivo:
+        json.dump(dict,archivo, indent=4)
 # ********************************************************** FUNCIONES ************************************************************
 
 def create(file = "R3/sem5/empresa.json"):
@@ -39,7 +44,10 @@ def create(file = "R3/sem5/empresa.json"):
             "numDoc":doc            
         }
         personas.append(datos)
-    return(personas)
+        with open(file, "w") as data:
+            json.dump(access_data,data, indent=4)
+    for persona in personas:
+        print (persona)
 
 def read():
     None
@@ -56,9 +64,7 @@ def delete():
 optMenu = int(input("1.CREAR 2.LEER \n3.ACTUALIZAR 4.ELIMINAR\n"))
 while optMenu != 0:
     if optMenu == 1:
-        with open("R3/sem5/empresa.json", "w") as datos:
-            json.dump(create(),datos)
-        
+        create()
     elif optMenu == 2:
         read()
     elif optMenu == 3:
@@ -66,7 +72,5 @@ while optMenu != 0:
     elif optMenu == 4:
         delete()
     optMenu = int(input("1.CREAR 2.LEER \n3.ACTUALIZAR 4.ELIMINAR\n"))
-#with open("R3/sem5/empresa.json", "r+") as datos:
-#    json.dump(datos,datos)
-#datos.close()
+
 
