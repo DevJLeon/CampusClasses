@@ -110,6 +110,8 @@ def updateBook():
             libro["_category"] = input("Write the new category: \t")
         change = int(input(
             "What do you want to update?: \n1.Title 2.Authors\n3.Publish year 4.Price\n5.Category 0.EXIT\n"))
+        
+        save()
 
 def deleteBook():
     print("Choose wich book you want to delete:")
