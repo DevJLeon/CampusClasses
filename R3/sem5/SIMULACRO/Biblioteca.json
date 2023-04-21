@@ -46,42 +46,6 @@
                 "year": "2003",
                 "price": "39.95",
                 "_category": "WEB"
-            },
-            {
-                "title": {
-                    "_lang": "en",
-                    "__text": "is"
-                },
-                "author": [
-                    "nombre",
-                    "nombree"
-                ],
-                "year": "2020",
-                "price": "100.0",
-                "_category": "comedy"
-            },
-            {
-                "title": {
-                    "_lang": "en",
-                    "__text": "El pollito Pio"
-                },
-                "author": [
-                    "Gacelin",
-                    "Willy"
-                ],
-                "year": "2023",
-                "price": "50.0",
-                "_category": "Comedy"
-            },
-            {
-                "title": {
-                    "_lang": "en",
-                    "__text": "Las aventuras del gato"
-                },
-                "author": "Mocca",
-                "year": "2023",
-                "price": "60.21",
-                "_category": "Adventure"
             }
         ]
     }
