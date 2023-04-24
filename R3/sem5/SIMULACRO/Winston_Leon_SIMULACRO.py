@@ -1,6 +1,9 @@
 import json
 import time
 
+##NOTA PARA EL PROFESOR: 
+#### Mi ruta acá es local, así que cuando ejecute el programa, debe colocar el archivo en una ruta similar, o modificar las que están escritas acá (no alcancé a arreglar este pqueño detalle por tiempo)
+
 with open("R3/sem5/SIMULACRO/Biblioteca.json") as biblioteca:
     access_b = json.load(biblioteca)
     bookstore = access_b["bookstore"]
